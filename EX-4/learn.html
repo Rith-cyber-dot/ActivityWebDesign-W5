@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Finance Tracker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr;
+            grid-template-areas:
+                "sidebar header"
+                "sidebar main";
+            height: 100vh;
+            background-color: #f4f4f5;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #18181b;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sidebar a{
+            background-color: #56565b;
+            color: #ffffff;
+            border-radius: 0.5rem;
+            padding: 15px 12px;
+
+            text-decoration: none;
+        }
+
+         .sidebar a:hover{
+            background-color: #9e9ea4;
+            text-decoration: none;
+            /* transition-duration: 0.8s; */
+        }
+
+        .header {
+            grid-area: header;
+            background-color: white;
+            border-bottom: 1px solid #e4e4e7;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            
+        }
+
+        .card,
+        .transactions {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+        }
+
+        .amount {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f4f4f5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h3>FinTrack</h3>
+            <a href="#">Dashboard</a>
+            <a href="#">Transactions</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <header class="header">
+            <h4>Overview</h4>
+        
+        </header>
+
+        <main class="main">
+            <div class="cards">
+                <div class="card">
+                    <p>Balance</p>
+                    <div class="amount">$2,450</div>
+                </div>
+                <div class="card">
+                    <p>Income</p>
+                    <div class="amount" style="color: rgb(23, 194, 23);">+$3,200</div>
+                </div>
+                <div class="card">
+                    <p>Expenses</p>
+                    <div class="amount" style="color: rgb(255, 0, 0);">-$750</div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="transactions">
+                <h4 style="margin-bottom: 10px;">Recent Transactions</h4>
+                <div class="item">
+                    <span>Salary</span>
+                    <span style="color: green;">+$3,200</span>
+                </div>
+                <div class="item">
+                    <span>Groceries</span>
+                    <span style="color: red;">-$120</span>
+                </div>
+                <div class="item">
+                    <span>Internet Bill</span>
+                    <span style="color: red;">-$45</span>
+                </div>
+                <div class="item">
+                    <span>Internet Bill</span>
+                    <span style="color: red;">-$45</span>
+                </div>
+                <div class="item">
+                    <span>Internet Bill</span>
+                    <span style="color: red;">-$45</span>
+                </div>
+                <div class="item">
+                    <span>Internet Bill</span>
+                    <span style="color: red;">-$45</span>
+                </div>
+                <div class="item">
+                    <span>Internet Bill</span>
+                    <span style="color: red;">-$45</span>
+                </div>
+                <div class="item">
+                    <span>Groceries</span>
+                    <span style="color: red;">-$120</span>
+                </div>
+                <div class="item">
+                    <span>Groceries</span>
+                    <span style="color: red;">-$120</span>
+                </div>
+                <div class="item">
+                    <span>Groceries</span>
+                    <span style="color: red;">-$120</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
